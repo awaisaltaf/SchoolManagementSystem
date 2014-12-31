@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-29T00:31:17 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2608aa7f-3796-45bb-bbd8-2bca480fb268">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="47"/>
+	<property name="ireport.y" value="451"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SMS"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset" uuid="4ee99725-7a37-48b3-83fa-bc422ea38776"/>
+	<queryString>
+		<![CDATA[select distinct *  from test_exams where EReg_no=10001 order by Reg_no ,ExamType]]>
+	</queryString>
+	<field name="Reg_no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ExamType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Marks" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TestId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EReg_no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ExamCount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ExamTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="examDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Grade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-2" width="842" height="80" forecolor="#006699" backcolor="#006699" uuid="80a9b90c-6716-4f7b-a54f-551ddde374b2"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement style="Title" x="81" y="20" width="548" height="50" uuid="64843362-6f90-44ec-9090-5242de805ec2"/>
+					<textElement textAlignment="Center">
+						<font size="30" isBold="false"/>
+					</textElement>
+					<text><![CDATA[School Management System]]></text>
+				</staticText>
+				<image>
+					<reportElement x="17" y="7" width="66" height="63" uuid="a6383251-06ca-43fc-bc18-f351c7097399"/>
+					<imageExpression><![CDATA["G:/School_Management_System/SchoolManagementSystem/src/images/sms.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="681" y="21" width="135" height="51" forecolor="#FFFFFF" uuid="fb3ce279-2e9a-464b-95f0-2bede6a45388"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[   Tel:         111-128-128
+  Email:     xyz@gmail.com
+Address:  LonyWala Stop]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch">
+			<frame>
+				<reportElement x="4" y="0" width="798" height="14" uuid="09c231f6-dda0-4d69-be4b-1d836b44baca"/>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="20" y="0" width="171" height="14" forecolor="#000000" uuid="a30ffd8d-fc91-489a-824a-0ff38140db72"/>
+					<box>
+						<topPen lineWidth="0.3"/>
+						<leftPen lineWidth="0.3"/>
+						<bottomPen lineWidth="0.3"/>
+						<rightPen lineWidth="0.3"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Reg_no]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="191" y="0" width="191" height="14" forecolor="#000000" uuid="7d2f537f-9882-43ce-a5cf-1885c528aafc"/>
+					<box>
+						<topPen lineWidth="0.3"/>
+						<leftPen lineWidth="0.3"/>
+						<bottomPen lineWidth="0.3"/>
+						<rightPen lineWidth="0.3"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[ExamType]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="382" y="0" width="191" height="14" forecolor="#000000" uuid="7b018b44-7c1a-4029-93d3-d7aad4854ebb"/>
+					<box>
+						<topPen lineWidth="0.3"/>
+						<leftPen lineWidth="0.3"/>
+						<bottomPen lineWidth="0.3"/>
+						<rightPen lineWidth="0.3"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Marks]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement x="4" y="0" width="798" height="14" uuid="43d6e89d-d609-490d-b864-6fdf2ed1ddf1"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="20" y="0" width="171" height="14" uuid="b621cf8e-6a44-410f-8393-3bf4145212af"/>
+					<box>
+						<topPen lineWidth="0.3"/>
+						<leftPen lineWidth="0.3"/>
+						<bottomPen lineWidth="0.3"/>
+						<rightPen lineWidth="0.3"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Reg_no}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="191" y="0" width="191" height="14" uuid="84c8841a-5eeb-44f8-9db2-4d1841d9a646"/>
+					<box>
+						<topPen lineWidth="0.3"/>
+						<leftPen lineWidth="0.3"/>
+						<bottomPen lineWidth="0.3"/>
+						<rightPen lineWidth="0.3"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ExamType}.concat($F{ExamCount}.toString() )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="382" y="0" width="191" height="14" uuid="28e225ac-66d3-4e7d-99ad-4ae3ef76e71b"/>
+					<box>
+						<topPen lineWidth="0.3"/>
+						<leftPen lineWidth="0.3"/>
+						<bottomPen lineWidth="0.3"/>
+						<rightPen lineWidth="0.3"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Marks}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="a6b879ec-5ca9-4029-8db7-26f3a41e6790"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="800" height="16" forecolor="#D0B48E" backcolor="#006699" uuid="d06842f9-3f9c-47b7-a11a-de30c0171a1a"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="753" y="0" width="40" height="16" forecolor="#FFFFFF" uuid="90373348-a527-4db7-b8cc-14ed3ab209b2"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="673" y="0" width="80" height="16" forecolor="#FFFFFF" uuid="3156e287-c2c4-4047-a3f6-24746b6db964"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="16" forecolor="#FFFFFF" uuid="338ab099-2663-4d8a-bd32-c3fd74de3b04"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
